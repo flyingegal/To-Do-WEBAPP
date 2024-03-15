@@ -1,0 +1,152 @@
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background: #506172;
+}
+button{
+    cursor: pointer;
+}
+
+.app{
+    font-family: "Poppins", sans-serif;
+    width: min(95vw, 31.25em);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 18%;
+}
+.container{
+    padding: 2em 2.5em;
+    
+    background-color: aliceblue;
+    
+    border-radius: 0.8rem;
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
+}
+
+#wraper{
+    position: relative;
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 1em;
+
+}
+#wraper input{
+    width: 100%;
+    background-color: transparent;
+    color: #111111;
+    font-size: 0.em;
+    border: none;
+    border-bottom: 2px solid #d1d3d4;
+    padding: 1em 0.5em;
+    cursor:text;
+}
+#wraper input:focus {
+    outline: none;
+    border-color: #5a95ff;
+}
+#wraper button{
+    position: relative;
+    border-radius:0.5em;
+    font-weight: 700;
+    font-size: large;
+    background-color: #941c27;
+    color: #fafbfc;
+    cursor: pointer;
+}
+#tasks{
+    margin-top: 1em;
+    border-radius: 0.5em;
+    width: 100%;
+    position: relative;
+    padding: 1em 0.5em ;
+    
+}
+.task{
+    background-color: #d1d3d4;
+    border-radius: 0.5em;
+    padding: 0.8em 1em ;
+    display: grid;
+    grid-template-columns: 1fr 8fr 2fr 2fr;
+    gap: 1em;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0);
+    align-items: center;
+    cursor: pointer;
+
+
+}
+.task:not(:first-child){
+    margin-top: 0.8em;
+}
+.task input[type="checkbox"]{
+    position: relative;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid rgb(107, 126, 57);
+    cursor: pointer;
+}
+.task input[type="checkbox"]:before{
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+.task input[type="checkbox"]:checked{
+    background-color: #5a95ff;
+    border-color: #5a95ff;
+
+}
+.task input[type="checkbox"]:checked:before{
+    position: absolute;
+    content: "\f00c";
+    color: #ffffff;
+    font-size: 0.8em;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+.task span {
+    font: 0.9em;
+    font-weight: 400;
+    word-break: break-all;
+}
+.task button{
+    color: #ffffff;
+    width: 100%;
+    padding: 1em 0;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+}
+.edit{
+    background-color: #5a95ff;
+
+}
+.delete{
+    background-color: red;
+}
+#pending-tasks span{
+    color: #5a95ff;
+}
+.completed{
+    text-decoration: line-through;
+    color: #a0a0a0;
+}
+
+#error{
+    text-align: center;
+    background-color: #ffffff;
+    color: red;
+    margin-top: 1.5em;
+    padding: 1em 0;
+    border-radius: 0.8em;
+    display : none;    
+}
